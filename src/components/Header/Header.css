@@ -1,7 +1,7 @@
 header .nasa {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 header h1 {
@@ -44,4 +44,8 @@ header .info {
   background-color: lightblue;
   box-shadow: 5px 5px 5px lightslategray;
   border-radius: 10px;
+}
+
+button {
+  font-size: 1.5rem;
 }

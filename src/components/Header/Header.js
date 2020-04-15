@@ -7,7 +7,7 @@ const Header = (props) => {
 
   return (
     <header>
-      <Nasa />
+      <Nasa setDate={props.setDate} date={props.date} />
       <Title title={props.title} copy={props.copy} date={props.date}/>
     </header>
   );
