@@ -13,6 +13,7 @@ function App() {
       axios
         .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
         .then(res => {
+          console.log(res.data)
           setAppData(res.data);
           console.log('Set App Data');
         })
@@ -21,6 +22,7 @@ function App() {
       axios
         .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`)
         .then(res => {
+          console.log(res.data)
           setAppData(res.data);
           console.log('Set App Data');
         })
