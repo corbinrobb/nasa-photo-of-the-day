@@ -1,0 +1,31 @@
+.display {
+  display: flex;
+  margin: 5% 0;
+}
+
+ .display .info {
+  width: 30%;
+  padding: 3%;
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+.display .photo {
+  width: 70%;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -5px 5px 5px lightslategray;
+  border-radius: 15px;
+}
+
+@media(max-width: 1500px) {
+  .display {
+    flex-direction: column-reverse;
+  }
+
+  .display .photo, .display .info {
+    width: 100vw;
+  }
+}
