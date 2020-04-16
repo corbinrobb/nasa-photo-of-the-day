@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import { Container, Row, Col, Button } from 'reactstrap';
 
 const Nasa = (props) => {
 
@@ -17,11 +18,17 @@ const Nasa = (props) => {
   }
 
   return (
-    <div className="nasa">
-      <button onClick={previousDay} >Previous</button>
-      <h1>Nasa</h1>
-      <button onClick={nextDay}>Next</button>
-    </div>
+    <Row>
+      <Col className="nasa-container">
+        <Button color="primary" onClick={previousDay} >Previous</Button>
+      </Col>
+      <Col className="nasa-container">
+        <h1 className="display-3">Nasa</h1>
+      </Col>
+      <Col className="nasa-container">
+        <Button color="primary" onClick={nextDay}>Next</Button>
+      </Col>
+    </Row>
   );
 }
 

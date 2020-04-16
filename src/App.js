@@ -3,6 +3,7 @@ import axios from 'axios';
 import "./App.css";
 import Header from "./components/Header/Header";
 import Photo from "./components/Photo/Photo";
+import { Container } from 'reactstrap';
 
 function App() {
   const [ appData, setAppData ] = useState();
@@ -32,10 +33,10 @@ function App() {
 
   if (!appData) return <h3>Loading...</h3>;
   return (
-    <div>
+    <Container>
       <Header title={appData.title} copy={appData.copyright} date={appData.date} setDate={setDate} />
       <Photo url={appData.url} intro={appData.explanation} />
-    </div>
+    </Container>
   );
 }
 

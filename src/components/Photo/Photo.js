@@ -1,16 +1,31 @@
 import React from "react";
 import "./Photo.css";
+import { Jumbotron } from 'reactstrap';
+import styled from 'styled-components';
+
+const Intro = styled.div`
+  margin-bottom: 2rem;
+`
+
+const Image = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+  img {
+    box-shadow: 5px 5px 5px lightslategray;
+  }
+`
 
 const Photo = (props) => {
   return (
-    <section className="display">
-      <div className="info">
+    <Jumbotron className="display">
+      <Intro className="lead">
         <p>{props.intro}</p>
-      </div>
-      <div className="photo">
-        <img src={props.url}></img>
-      </div>
-    </section>
+      </Intro>
+      <Image>
+        <img src={props.url} />
+      </Image>
+    </Jumbotron>
   );
 }
 
