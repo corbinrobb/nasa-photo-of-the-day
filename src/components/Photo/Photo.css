@@ -1,0 +1,5 @@
+.display {
+  display: flex;
+  margin: 5% 0;
+  flex-direction: column;
+}
